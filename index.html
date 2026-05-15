@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TASTICS BUGS</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    background:black;
+    color:#00ff00;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.box{
+    width:90%;
+    max-width:400px;
+    border:3px solid #00ff00;
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 0 20px #00ff00;
+}
+
+h1{
+    font-size:35px;
+    color:#00ff00;
+    text-shadow:0 0 15px #00ff00;
+    margin-bottom:5px;
+}
+
+.sub{
+    color:white;
+    font-size:14px;
+    margin-bottom:25px;
+}
+
+input,select{
+    width:100%;
+    padding:15px;
+    margin-bottom:20px;
+    border-radius:10px;
+    border:2px solid #00ff00;
+    background:black;
+    color:#00ff00;
+    font-size:18px;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    border-radius:10px;
+    border:2px solid #00ff00;
+    background:black;
+    color:#00ff00;
+    font-size:18px;
+    cursor:pointer;
+}
+
+button:hover{
+    box-shadow:0 0 15px #00ff00;
+}
+
+#hasil{
+    margin-top:25px;
+    display:none;
+    border:2px solid #00ff00;
+    border-radius:15px;
+    padding:20px;
+    animation:fade 0.5s;
+}
+
+.circle{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    border:4px solid #00ff00;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:auto;
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:scale(0.8);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h1>TASTICS BUGS</h1>
+
+<p class="sub">web bug by tann</p>
+
+<input type="text" id="nomor" placeholder="Nomor Target">
+
+<select>
+<option>CRASH ANDROID</option>
+<option>CRASH INVISIBLE</option>
+<option>DELAY MAKER</option>
+</select>
+
+<button onclick="mulai()">START ATTACK</button>
+
+<div id="hasil">
+
+<div class="circle">
+✔
+</div>
+
+<p id="textHasil"></p>
+
+</div>
+
+</div>
+
+<script>
+
+function mulai(){
+
+var nomor = document.getElementById("nomor").value;
+
+document.getElementById("hasil").style.display = "block";
+
+document.getElementById("textHasil").innerHTML =
+nomor + " (success)";
+
+}
+
+</script>
+
+</body>
+</html>
